@@ -41,7 +41,7 @@ var translationObject = {
   'x': '-..-',
   'y': '-.--',
   'z': '--..',
-  ' ': ' ' // This allows whitespaces to be translated as one whitespace.
+  ' ': '/' // This allows words to be separated with a slash.
 
 };
 

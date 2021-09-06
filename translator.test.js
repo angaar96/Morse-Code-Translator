@@ -13,7 +13,7 @@ test('Should correctly translate a very long english word', () => {
   expect(convertToMorse("Pneumonoultramicroscopicsilicovolcanoconiosis")).toBe(' .--. -. . ..- -- --- -. --- ..- .-.. - .-. .- -- .. -.-. .-. --- ... -.-. --- .--. .. -.-. ... .. .-.. .. -.-. --- ...- --- .-.. -.-. .- -. --- -.-. --- -. .. --- ... .. ... ');
 });
 test('Should correctly translate a sentence', () => {
-  expect(convertToMorse("The quick brown fox jumped over the lazy dog")).toBe(' - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. . -..   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. ');
+  expect(convertToMorse("The quick brown fox jumped over the lazy dog")).toBe(' - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- / .--- ..- -- .--. . -.. / --- ...- . .-. / - .... . / .-.. .- --.. -.-- / -.. --- --. ');
 });
 });
 describe('Integer functionality', () => {

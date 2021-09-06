@@ -18,7 +18,7 @@ describe('Integer functionality', function () {
     expect((0, _translator["default"])("Pneumonoultramicroscopicsilicovolcanoconiosis")).toBe(' .--. -. . ..- -- --- -. --- ..- .-.. - .-. .- -- .. -.-. .-. --- ... -.-. --- .--. .. -.-. ... .. .-.. .. -.-. --- ...- --- .-.. -.-. .- -. --- -.-. --- -. .. --- ... .. ... ');
   });
   test('Should correctly translate a sentence', function () {
-    expect((0, _translator["default"])("The quick brown fox jumped over the lazy dog")).toBe(' - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. . -..   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. ');
+    expect((0, _translator["default"])("The quick brown fox jumped over the lazy dog")).toBe(' - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- / .--- ..- -- .--. . -.. / --- ...- . .-. / - .... . / .-.. .- --.. -.-- / -.. --- --. ');
   });
 });
 describe('Integer functionality', function () {
