@@ -8,11 +8,19 @@
   <title>Morse Code Translator</title>
 </head>
 <body>
-  <div class = "translatorWrapper"> 
-    <label for="morseCodeInput"> Please input a word, sentence or number to translate to morse code: </label>
-    <input type="text" name="morseCodeInput" class = "morseCodeInput" id = "morseCodeInput">
-    <button type="submit" class="translateWordButton"> Translate to Morse Code </button>
-    <h2 class = "translatedWord"> </h2>
+  <div class = "englishToMorseTranslator"> 
+    <h1 class="englishToMorseTranslator__header"> English to Morse Code Translator </h1>
+    <label for="englishToMorseTranslator__input" class="englishToMorseTranslator__input-label"> Please input a word, sentence or number to translate to morse code.<br> Please separate words with a whitespace " ". </label>
+    <input type="text" name="englishToMorseTranslator__input" class = "englishToMorseTranslator__input" id = "englishToMorseTranslator__input">
+    <button type="submit" class="englishToMorseTranslator__translateWordButton"> Translate to Morse Code </button>
+    <h2 class = "englishToMorseTranslator__translatedWord"> </h2>
+  </div>
+  <div class = "morseToEnglishTranslator"> 
+    <h1 class="morseToEnglishTranslator__header"> Morse Code to English Translator </h1>
+    <label for="morseToEnglishTranslator__input" class="morseToEnglishTranslator__input-label"> Please input a word, sentence or number in morse code to translate to english.<br> Please separate words with a forward slash "/".  </label>
+    <input type="text" name="morseToEnglishTranslator__input" class = "morseToEnglishTranslator__input" id = "morseToEnglishTranslator__input">
+    <button type="submit" class="morseToEnglishTranslator__translateWordButton"> Translate to English </button>
+    <h2 class = "morseToEnglishTranslator__translatedWord"> </h2>
   </div>   
   <script src="app.js" type="module"></script>
   <script src="translator.js" type="module"></script> 

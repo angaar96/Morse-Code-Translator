@@ -4,15 +4,22 @@
 // translator.test.js - your test file
 
 import convertToMorse from "./translator.js"
+import convertToEnglish from "./translator.js"
 
-let translateWordButton = document.querySelector(".translateWordButton");
-let translatedWordMessage = document.querySelector(".translatedWord"); 
+let translateEnglishWordButton = document.querySelector(".englishToMorseTranslator__translateWordButton");
+let translatedEnglishWordMessage = document.querySelector(".englishToMorseTranslator__translatedWord"); 
+let translateMorseWordButton = document.querySelector(".morseToEnglishTranslator__translateWordButton");
+let translatedMorseWordMessage = document.querySelector(".morseToEnglishTranslator__translatedWord");  
 
 
-
-translateWordButton.addEventListener("click", () => {
-  let englishWord = document.querySelector(".morseCodeInput").value;
-  let translatedWord = convertToMorse(englishWord); 
-  translatedWordMessage.innerHTML = `Your word in Morse code is: ${translatedWord}`; 
+translateEnglishWordButton.addEventListener("click", () => {
+  let englishWord = document.querySelector(".englishToMorseTranslator__input").value;
+  let translatedEnglishWord = convertToMorse(englishWord); 
+  translatedEnglishWordMessage.innerHTML = `Your word in Morse code is: ${translatedEnglishWord}`; 
 })
 
+translateMorseWordButton.addEventListener("click", () => {
+  let morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
+  let translatedMorseWord = convertToEnglish(morseWord); 
+  translatedMorseWordMessage.innerHTML = `Your word in Morse code is: ${translatedMorseWord}`; 
+})

@@ -25,7 +25,7 @@ describe('Integer functionality', function () {
   test('Should correctly translate a single number', function () {
     expect((0, _translator["default"])("0")).toBe(" ----- ");
   });
-  test('Should correctly translate a single number', function () {
+  test('Should correctly translate a double digit number', function () {
     expect((0, _translator["default"])("10")).toBe(" .---- ----- ");
   });
   test('Should correctly translate a larger number', function () {
