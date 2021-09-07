@@ -1,8 +1,6 @@
 "use strict";
 
-var _translator = _interopRequireDefault(require("./translator.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _translator = require("./translator.js");
 
 // index.html - html file
 // app.js - DOM interactions
@@ -14,11 +12,11 @@ var translateMorseWordButton = document.querySelector(".morseToEnglishTranslator
 var translatedMorseWordMessage = document.querySelector(".morseToEnglishTranslator__translatedWord");
 translateEnglishWordButton.addEventListener("click", function () {
   var englishWord = document.querySelector(".englishToMorseTranslator__input").value;
-  var translatedEnglishWord = (0, _translator["default"])(englishWord);
+  var translatedEnglishWord = (0, _translator.convertToMorse)(englishWord);
   translatedEnglishWordMessage.innerHTML = "Your word in Morse code is: ".concat(translatedEnglishWord);
 });
 translateMorseWordButton.addEventListener("click", function () {
   var morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
-  var translatedMorseWord = (0, _translator["default"])(morseWord);
+  var translatedMorseWord = (0, _translator.convertToEnglish)(morseWord);
   translatedMorseWordMessage.innerHTML = "Your word in Morse code is: ".concat(translatedMorseWord);
 });

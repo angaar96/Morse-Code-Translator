@@ -3,11 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var translationObject = _defineProperty({
+exports.convertToEnglish = exports.convertToMorse = void 0;
+var translationObject = {
   '1': '.----',
   '2': '..---',
   '3': '...--',
@@ -44,8 +41,11 @@ var translationObject = _defineProperty({
   'x': '-..-',
   'y': '-.--',
   'z': '--..',
-  ' ': '/'
-}, " ", '');
+  ' ': '/',
+  // This allows words to be separated with a slash.
+  '': ' ' // Allows spaces between morse letters to be replaced with nothing. 
+
+};
 
 var convertToMorse = function convertToMorse(word) {
   var lowerCasedWord = word.toLowerCase(); // Morse code doesn't distinguish between lower and upper case. 
@@ -62,6 +62,8 @@ var convertToMorse = function convertToMorse(word) {
   return translatedWord;
 };
 
+exports.convertToMorse = convertToMorse;
+
 var getKeyByValue = function getKeyByValue(object, value) {
   return Object.keys(object).find(function (key) {
     return object[key] === value;
@@ -76,11 +78,11 @@ var convertToEnglish = function convertToEnglish(word) {
   console.log(morseWordCharacters); // Grab each letter from array of letters and use it to find translated version of letter and concatenate to the end of translated word.   
 
   for (var i = 0; i < morseWordCharacters.length; i++) {
-    translatedWord += "".concat(getKeyByValue(translationObject, morseWordCharacters[i]), " ");
+    console.log(morseWordCharacters[i]);
+    translatedWord += "".concat(getKeyByValue(translationObject, morseWordCharacters[i]));
   }
 
   return translatedWord;
 };
 
-var _default = convertToMorse;
-exports["default"] = _default;
+exports.convertToEnglish = convertToEnglish;

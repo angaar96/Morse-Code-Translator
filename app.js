@@ -3,8 +3,7 @@
 // translator.js - contains all your functions
 // translator.test.js - your test file
 
-import convertToMorse from "./translator.js"
-import convertToEnglish from "./translator.js"
+import {convertToMorse, convertToEnglish} from "./translator.js"
 
 let translateEnglishWordButton = document.querySelector(".englishToMorseTranslator__translateWordButton");
 let translatedEnglishWordMessage = document.querySelector(".englishToMorseTranslator__translatedWord"); 
