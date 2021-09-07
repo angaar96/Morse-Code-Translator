@@ -1,5 +1,6 @@
-import convertToMorse from "./translator.js"
-describe('Integer functionality', () => {
+import {convertToMorse} from "./translator.js"
+
+describe('General functionality', () => {
   test('inputting a single letter should return the correct morse counterpart', () => {
     expect(convertToMorse("a")).toBe(' .- ');
   });

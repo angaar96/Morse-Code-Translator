@@ -74,8 +74,7 @@ var convertToEnglish = function convertToEnglish(word) {
   var morseWordCharacters = word.split(" "); // Gives an array of letters in the word 
 
   var translatedWord = " "; // Initialise translated word
-
-  console.log(morseWordCharacters); // Grab each letter from array of letters and use it to find translated version of letter and concatenate to the end of translated word.   
+  // Grab each letter from array of letters and use it to find translated version of letter and concatenate to the end of translated word.   
 
   for (var i = 0; i < morseWordCharacters.length; i++) {
     console.log(morseWordCharacters[i]);
