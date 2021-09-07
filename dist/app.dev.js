@@ -13,10 +13,10 @@ var translatedMorseWordMessage = document.querySelector(".morseToEnglishTranslat
 translateEnglishWordButton.addEventListener("click", function () {
   var englishWord = document.querySelector(".englishToMorseTranslator__input").value;
   var translatedEnglishWord = (0, _translator.convertToMorse)(englishWord);
-  translatedEnglishWordMessage.innerHTML = "Your word in Morse code is: ".concat(translatedEnglishWord);
+  translatedEnglishWordMessage.innerHTML = "Your word/sentence in Morse code is: <br> ".concat(translatedEnglishWord);
 });
 translateMorseWordButton.addEventListener("click", function () {
   var morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
   var translatedMorseWord = (0, _translator.convertToEnglish)(morseWord);
-  translatedMorseWordMessage.innerHTML = "Your word in English is: ".concat(translatedMorseWord);
+  translatedMorseWordMessage.innerHTML = "Your word/sentence in English is: <br> ".concat(translatedMorseWord);
 });

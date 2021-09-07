@@ -14,11 +14,11 @@ let translatedMorseWordMessage = document.querySelector(".morseToEnglishTranslat
 translateEnglishWordButton.addEventListener("click", () => {
   let englishWord = document.querySelector(".englishToMorseTranslator__input").value;
   let translatedEnglishWord = convertToMorse(englishWord); 
-  translatedEnglishWordMessage.innerHTML = `Your word in Morse code is: ${translatedEnglishWord}`; 
+  translatedEnglishWordMessage.innerHTML = `Your word/sentence in Morse code is: <br> ${translatedEnglishWord}`; 
 })
 
 translateMorseWordButton.addEventListener("click", () => {
   let morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
   let translatedMorseWord = convertToEnglish(morseWord); 
-  translatedMorseWordMessage.innerHTML = `Your word in English is: ${translatedMorseWord}`; 
+  translatedMorseWordMessage.innerHTML = `Your word/sentence in English is: <br> ${translatedMorseWord}`; 
 })
