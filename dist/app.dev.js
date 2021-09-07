@@ -18,5 +18,5 @@ translateEnglishWordButton.addEventListener("click", function () {
 translateMorseWordButton.addEventListener("click", function () {
   var morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
   var translatedMorseWord = (0, _translator.convertToEnglish)(morseWord);
-  translatedMorseWordMessage.innerHTML = "Your word in Morse code is: ".concat(translatedMorseWord);
+  translatedMorseWordMessage.innerHTML = "Your word in English is: ".concat(translatedMorseWord);
 });

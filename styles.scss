@@ -4,23 +4,107 @@
 }
 
 body {
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
   width: 100vw; 
   height: 100vh;
   display: flex; 
   justify-content: space-around; 
   align-items: center; 
+  background: url("./assets/images/background.jpg"); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  flex-wrap: wrap; 
 }
 
-.englishToMorseTranslator, .morseToEnglishTranslator {
+
+.englishToMorseTranslator {
   display: flex; 
   align-items: center; 
   justify-content: space-around; 
   flex-direction: column; 
   height: 30vh; 
   text-align: center; 
-  border: 2px solid black; 
+  border: 2px solid white; 
   border-radius: 15px; 
-  padding: 10px; 
+  padding: 10px;  
+  background-color: black;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  &__input {
+    width: 80%; 
+    height: 30px; 
+  }
+  &__translateWordButton {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 25px;  
+    border: 5px solid transparent; 
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;   
+    padding: 10px;
+    color: black; 
+  }
 }
 
+.morseToEnglishTranslator {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around; 
+  flex-direction: column; 
+  height: 30vh; 
+  text-align: center; 
+  border: 2px solid white; 
+  border-radius: 15px; 
+  padding: 10px; 
+  background-color: black;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  &__input {
+    width: 80%; 
+    height: 30px; 
+  }
+  &__translateWordButton {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;  
+    border: 5px solid transparent; 
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;   
+    padding: 10px;
+    color: black; 
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .morseToEnglishTranslator {
+    height: 45vh; 
+    width: 80vw;
+    &__input {
+      width: 80%; 
+      height: 30px; 
+    }
+    &__translateWordButton {
+      font-size: 15px;  
+      border: 3px solid transparent; 
+    }
+  }
+
+  .englishToMorseTranslator {
+    height: 45vh; 
+    width: 80vw; 
+    border: 2px solid white; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    &__input {
+      width: 80%; 
+      height: 30px; 
+    }
+    &__translateWordButton {
+      font-size: 15px;  
+      border: 5px solid transparent; 
+      background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;   
+      padding: 10px;
+      color: black; 
+    }
+  }
+}

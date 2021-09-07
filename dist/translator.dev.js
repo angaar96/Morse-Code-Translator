@@ -42,13 +42,14 @@ var translationObject = {
   'y': '-.--',
   'z': '--..',
   ' ': '/',
-  // This allows words to be separated with a slash.
-  '': ' ' // Allows spaces between morse letters to be replaced with nothing. 
+  // This key-value pair allows words to be separated with a slash.
+  '': ' ' // This key-value pair joins spaces between morse characters when called in the function convertToEnglish. 
+  // convertToEnglish looks for the key rather than the value by calling the function getKeyByValue.
 
 };
 
 var convertToMorse = function convertToMorse(word) {
-  var lowerCasedWord = word.toLowerCase(); // Morse code doesn't distinguish between lower and upper case. 
+  var lowerCasedWord = word.trim().toLowerCase(); // Morse code doesn't distinguish between lower and upper case. Trim extra space to avoid errors. 
 
   var wordCharacters = lowerCasedWord.split(""); // Gives an array of letters in the word 
 
@@ -71,13 +72,12 @@ var getKeyByValue = function getKeyByValue(object, value) {
 };
 
 var convertToEnglish = function convertToEnglish(word) {
-  var morseWordCharacters = word.split(" "); // Gives an array of letters in the word 
+  var morseWordCharacters = word.trim().split(" "); // Extra space is trimmed to avoid errors. .split() gives an array of letters in the word.  
 
-  var translatedWord = " "; // Initialise translated word
-  // Grab each letter from array of letters and use it to find translated version of letter and concatenate to the end of translated word.   
+  var translatedWord = ""; // Initialise translated word
+  // Grab each letter from array of letters and use it to find translated version of letter and concatenate it to the end of translatedWord.   
 
   for (var i = 0; i < morseWordCharacters.length; i++) {
-    console.log(morseWordCharacters[i]);
     translatedWord += "".concat(getKeyByValue(translationObject, morseWordCharacters[i]));
   }
 

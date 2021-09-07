@@ -20,5 +20,5 @@ translateEnglishWordButton.addEventListener("click", () => {
 translateMorseWordButton.addEventListener("click", () => {
   let morseWord = document.querySelector(".morseToEnglishTranslator__input").value;
   let translatedMorseWord = convertToEnglish(morseWord); 
-  translatedMorseWordMessage.innerHTML = `Your word in Morse code is: ${translatedMorseWord}`; 
+  translatedMorseWordMessage.innerHTML = `Your word in English is: ${translatedMorseWord}`; 
 })
