@@ -4,7 +4,7 @@
 
 A Morse code translator built during week 5 of my software development course at \_nology and tested using Jest. 
 
-It is capable of translating English words to Morse code and vice versa and can also translate sentences.  
+It is capable of translating English words to Morse code and vice versa, and can also translate sentences.  
  
 Thanks to Marcus Spiske on Unsplash for the background image.
 
